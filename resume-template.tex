@@ -1,0 +1,236 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{arabic}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Roshan Balaji Nindrai SenthilNathan}{roshan.nindrai@gmail.com}{roshannindrai.me}{https://github.com/RoshanNindrai}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+\header{Objective}
+
+\begin{body}
+	\vspace{14pt}
+	Seeking a competitive position to apply my Computer Science skills and understanding of present technologies to build applications.
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Masters in Computer Science\hspace{23pt} --- GPA 3.50/4.00}{} \hfill \emph{May 2014}{} \\
+	\emph{Rochester Institute of Technology} - Rochester, NY{} \\
+  \medskip
+	\textbf{B.Tech in Information Technology --- GPA 3.40/4.00} \hfill \emph{March 2011} \\
+	\emph{Anna University} - Chennai, India\\
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{Skills}
+
+\begin{body}
+	\vspace{14pt}
+	\emph{\textbf{Programming Languages:}}{} Objective - C,  Java, Python,  Javascript, HTML,  \LaTeX, Visual Basic, SQL, MongoDB, Redis, XML, C++, C, php,  C\#\\
+	\medskip
+	\emph{\textbf{Operating Systems:}}{} Windows, Mac OS X, Linux\\
+\medskip
+\emph{\textbf{Development Tools :}}{} Rational Rose, Xcode, Visual basic 6, Eclipse, Weka, Code Blocks, Mysql workbench, Sql server 2008 R2, Visual studio 2010, Sublime Editor, phpstrom, pycharm.\\
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Career Projects}
+
+\begin{body}
+	\vspace{14pt}
+\textbf {RBSentinel}, \emph{Creating pub/sub based communication channel between apple watch and ios app} \hfill \emph{June 2015}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+	\item Designed and developed RBSentinel, An open-source project to help improve the communication between the applewatch and the parent application. It opens up a REST based interface to handle information needed by the watchapp either when the app is in foreground or in background.
+	\item \emph{Tools:} Xcode, Objective - C, Watchkit .
+\end{itemize}
+
+\textbf {QA Automation Server}, \emph{ To deploy and test mobile apps iOS and andoid using monkeytalk} \hfill \emph{January 2015}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+	\item Developed and coded the entire automation infrastructure for UI testing. This includes building a scheduler that gets build and test requirements from 	  jenkins and assigning jobs to distributed automation servers, deploying and launching the apps on thier respective platforms and performing UI testing using monkeytalk on physical devices, real time status notification to PM's and ability to run tests on specific devices and OS version.
+		\item \emph{Tools :} Python, adb, Xcode instruments, Amazon aws.
+\end{itemize}
+\textbf {SNRoutes}, \emph{ Block based complex URL scheme router } \hfill \emph{January 2015}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+	\item Developed and designed SNRoutes to resolve complex URL schemes within the iOS application with block based routing support out of box. This can be used to perform in-app routing as well as deeplink handing. SNRoutes also support grouped based routing out of box.
+	\item \emph{Tools:} Xcode, Objective - C .
+\end{itemize}
+\textbf {JSON based templating engine}, \emph{ To Remotely change iOS native component UI properties } \hfill \emph{December 2014}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+	\item Developed a JSON based template engine to change view properties realtime based off of JSON files enabling us to share UI code across multiple projects. UI updates can also be made on specific target devices remotely. This includes changing properties across multiple levels (CALayer proerties to contraints) remotely.
+	\item \emph{Tools:} Xcode, Firebase(remote JSON), Objective - C .
+\end{itemize}
+\textbf {Smart Shopping Bag}, \emph{ To identify products and provide product suggestion} \hfill \emph{October 2014}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+	\item Developed and coded the prototype ios app that uses BLE to communicate with arduino based smart bag. Used CoreBluetooth framework to support communication, and custom external display driver to provide realtime second screen product recommendation and PD information.
+	\item \emph{Tools:} CoreBluetooth framework, c++, CoreData manager.
+\end{itemize}
+	\textbf{Random Forest - Parallel Implementation}, \emph{Machine Learning} \hfill \emph{Febuary 2013}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Developed the initial cluster implementation of random forest, a machine learning algorithm using Parallel Java and analyzing thier performances over time and resource utilization metrics.
+\item \emph{Technologies :} Parallel Java Library (Java variant of MPI developed at RIT).
+\item \emph{GitHub Project Link :} https://github.com/RoshanNindrai/Parallel-Random-Forest
+	\end{itemize}
+
+	\textbf { Native iOS Mobile Chat Application}, \emph{ WhatsApp like application using MQTT protocol } \hfill \emph{January 2014}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Developed and coded the Objective - C library for MQTT client which interacts with the open source MQTT broker (mosca) that is specifically designed for power limited devices. Developed supporting cocoa controls for handling and showing notifications / alerts, and Messaging UI.\item Wrote additional module in JavaScript to store offline messages.
+		\item \emph{Tools :} Objective - C, custom controls written in obj  - C , php (for web servers), Mysql, MongoDB(offline message storage) and Node.js.
+\item \emph{Project :} Demo in-person. 
+	
+	\end{itemize}
+\textbf {Simulation of BitTorrent-like system}, \emph{To measure average download time} \hfill \emph{November 2012}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Coded the initial  prototype of bittorrent simulator to test our hypothesis on average download time O(log N) of a file that is propagating in a Bit -Torrent like network with certain filters and assumptions.
+		\item \emph{Tools :} Java, RMI in Java, Custom Graphics library, Shell Scripting.
+\item \emph{ Project Link :} https://github.com/RoshanNindrai/Bit-Torrent-Simulation
+	
+	\end{itemize}
+\vspace*{+30pt}
+
+\textbf {Additional Open-Source Projects at :} https://github.com/RoshanNindrai 
+\end{body}
+\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Experience
+\header{Experience}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Fouding member}, Causbuzz Incorporated \hfill {}\emph{Summer 2012}\\
+	\textbf{iOS Jr. Developer}, SapientNitro \hfill {}\emph{August 2014 - Present}\\	
+	\smallskip
+	
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Leadership
+\header{Leadership Activities}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Co-founder, President}, R.M.K Engineering College. I.T Tech Club \hfill {} \emph{Summer 2011}\\
+	\smallskip
+	
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{Awards and Honors}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Graduate Scholarship}, Rochester institute of technology \hfill{} \emph{2011 - 2014}\\
+	\smallskip
+	
+	\textbf{Participant}, Apple IOS Challenge at Rochester institute of technology \hfill{} \emph{March 2013}\\
+\end{body}
+
+\end{document}
